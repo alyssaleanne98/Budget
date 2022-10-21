@@ -31,19 +31,20 @@ app.get('/budget/new', (req, res) => {
     res.render('new.ejs')
 })
 
-//============= Show ==============
-app.get('/budget/:id', (req, res) => {
-    // res.send(req.params.id)
-    res.render('show.ejs', {
-        allBudget: budget[req.params.id]
-    })
-})
 
 // ========== Post new route ==========
 app.post('/budget/', (req, res) => {
     console.log(req.body)
     budget.push(req.body)
     res.redirect('/budget')
+})
+
+//============= Show ==============
+app.get('/budget/:id', (req, res) => {
+    // res.send(req.params.id)
+    res.render('show.ejs', {
+        allBudget: budget[req.params.id]
+    })
 })
 
 

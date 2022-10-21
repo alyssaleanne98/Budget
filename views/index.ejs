@@ -12,8 +12,24 @@
 </head>
 <body>
     <div class="container">
-        var bankAccount
+        <button><a href="/budget/new" class="add-btn">Add a New Item</a></button>
     <h1>Budgtr</h1>
+    <% let bankAccount = allBudget.reduce((newAmount, allBudget) => {return newAmount + parseInt(allBudget.amount)}, 0) %>
+    <% if (bankAccount <= 0) { %>
+        
+        <style> 
+        body {
+            background-color: red;
+            }
+        </style>
+    <% } else if (bankAccount > 1000) { %>
+        <style>
+        body {
+            background-color: green;
+            }
+        </style> 
+    <% } %>
+
     <table>
         <% for(let i = 0; i < allBudget.length; i++) { %>
         <tr>

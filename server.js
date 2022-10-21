@@ -15,6 +15,7 @@ app.get("/", (req,res) => {
     res.send("Listening..")
 })
 
+// ============== Index ===============
 app.get('/budget', (req, res) => {
     // res.send("Welcome to Budget")
     res.render('index.ejs', {
@@ -22,8 +23,13 @@ app.get('/budget', (req, res) => {
         title: 'index'
     })
 })
-
-//show 
+//============= Show ==============
+app.get('/budget/:id', (req, res) => {
+    // res.send(req.params.id)
+    res.render('show.ejs', {
+        allBudget: budget[req.params.id]
+    })
+})
 
 
 

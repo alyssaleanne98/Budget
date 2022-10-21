@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
+    <title>Budget</title>
+</head>
+<body>
+    <div class="container">
+        <button><a href="/budget/" class="back-btn"></a>Back</a></button>
+        <h1><%= allBudget.name %></h1>
+
+        <h3> Date: </h3>
+        <h6><%= allBudget.date%></h6>
+        <h3> Name: </h3>
+        <h6><%= allBudget.name%></h6>
+        <h3> From: </h3>
+        <h6><%= allBudget.from%></h6>
+        <h3> Amount: </h3>
+        <h6><%= allBudget.amount%></h6>
+        <h3> Tags: </h3>
+        <h6><%= allBudget.tags%></h6>
+</body>
+</html>
